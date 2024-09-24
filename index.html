@@ -36,14 +36,17 @@
                 case 3:
                     produtosCadastrados()
                     break; 
-                    
+
                 case 4:
                     console.log("Saindo do programa...")
                 default:
                     break;
             }
         }
+
+        // função que exibe a lista de produtos
         function listaDeProdutos() {
+
             console.log("--------------------------")
             console.log("---Produtos disponíveis---")
             console.log("--------------------------")
@@ -57,6 +60,8 @@
             console.log("-------------------------")
             console.log("1 - Próxima Página ")
             console.log("0 - Voltar ao menu")
+
+            // ler a opção proxima página ou voltar
             let opcao = prompt("Digite a opção desejada:")
             let numero = parseInt(opcao)
 
@@ -74,6 +79,8 @@
                 console.log("-------------------------")
                 console.log("1 - Página anterior ")
                 console.log("0 - Voltar ao Menu")
+
+                // ler a opção proxima página ou voltar
                 let opcao = prompt("Digite a opção desejada:")
                 let numero = parseInt(opcao)
 
@@ -94,15 +101,26 @@
             }
         }
 
+        // função de cadastro dos produtos
         function cadastroDeProdutos() {
             console.log(`OI EU SOU A FUNCAO 2`)
+
             // Construtor da classe Produto, inicializa os atributos.
             class Produto {
-                constructor(){
-                    
+                constructor(nome, preco){
+                    this.nome = nome,
+                    this.preco = preco
                 }
             }
             
+            // criação do array
+            let cadastro = []
+            let produto
+
+            //leitura de produtos
+            do {
+                
+            } while (condition);
         }
 
         function produtosCadastrados() {
