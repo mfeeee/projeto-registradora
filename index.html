@@ -6,35 +6,101 @@
     <title>Projeto Denival | Jhonatan e Maria Fernanda</title>
 </head>
 <body>
+    
     <script>
+        menu()
+
         // interface do menu
-        console.log(`---------------------------------------`)
-        console.log(`--------REGISTRADOR DE PRODUTOS--------`)
-        console.log(`---------------------------------------`)
-        console.log(`Opções:`)
-        console.log(`1 - Lista de Produtos`)
-        console.log(`2 - Cadastrar Produto`)
-        console.log(`3 - Produtos Cadastrados`)
-        console.log(`4 - Sair`)
-        let opcao = prompt("Digite a opção desejada:")
-        let numero = parseInt(opcao)
+        function menu(){
+            console.log(`---------------------------------------`)
+            console.log(`--------REGISTRADOR DE PRODUTOS--------`)
+            console.log(`---------------------------------------`)
+            console.log(`Opções:`)
+            console.log(`1 - Lista de Produtos`)
+            console.log(`2 - Cadastrar Produto`)
+            console.log(`3 - Produtos Cadastrados`)
+            console.log(`4 - Sair`)
+            let opcao = prompt("Digite a opção desejada:")
+            var numero = parseInt(opcao)
+        
+            // analisar opcao escolhida
+            switch (numero) {
+                case 1:
+                    listaDeProdutos()
+                    break;
+                
+                case 2:
+                    cadastroDeProdutos()
 
-        // analisar opcao escolhida
-        switch (numero) {
-            case 1:
-                listaDeProdutos()
-                break;
+                case 3:
+                    produtosCadastrados()
+
+                case 4:
+                    console.log("Saindo do programa...")
+                default:
+                    break;
+            }
+        }
+        function listaDeProdutos() {
+            console.log("--------------------------")
+            console.log("---Produtos disponíveis---")
+            console.log("--------------------------")
+            console.log("Frutas:")
+            console.log("Banana")
+            console.log("Mamão")
+            console.log("Melão")
+            console.log("Laranja")
+            console.log("Maçã")
+            console.log("Goiaba")
+            console.log("-------------------------")
+            console.log("1 - Próxima Página ")
+            console.log("0 - Voltar ao menu")
+            let opcao = prompt("Digite a opção desejada:")
+            let numero = parseInt(opcao)
+
+            // analisar opcao escolhida
+            switch (numero) {
+                case 1:
+                console.log("--------------------------")
+                console.log("---Produtos disponíveis---")
+                console.log("--------------------------")
+                console.log("Verduras:")
+                console.log("Alface")
+                console.log("Espinafre")
+                console.log("Tomate")
+                console.log("Cenoura")
+                console.log("-------------------------")
+                console.log("1 - Página anterior ")
+                console.log("0 - Voltar ao Menu")
+                let opcao = prompt("Digite a opção desejada:")
+                let numero = parseInt(opcao)
+
+                // analisar opcao escolhida
+                switch (numero) {
+                    case 1: 
+                    listaDeProdutos()
+                    break;
+
+                    case 0:
+                    menu()
+                    break;
+                }
+                
+                case 0:
+                    menu()
+                    break;
+            }
+        }
+
+        function cadastroDeProdutos() {
+
+            // Construtor da classe Produto, inicializa os atributos.
+            class Produto {
+                constructor(){
+                    
+                }
+            }
             
-            case 2:
-                cadastroDeProdutos()
-
-            case 3:
-                produtosCadastrados()
-
-            case 4:
-                console.log("Saindo do programa...")
-            default:
-                break;
         }
     </script>
 </body>
