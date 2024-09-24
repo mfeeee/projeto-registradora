@@ -8,6 +8,14 @@
 <body>
     
     <script>
+        // Definição da classe Produto
+        class Produto {
+            constructor(nome, preco) {
+                this.nome = nome;
+                this.preco = preco;
+            }
+        }
+
         menu()
 
         // interface do menu
@@ -46,8 +54,56 @@
 
         // função que exibe a lista de produtos
         function listaDeProdutos() {
+            
+            var frutas = ['Banana','Mamão', 'Melão', 'Laranja', 'Maçã','Goiaba'];
+            console.log("--------------------------");
+            console.log("---Produtos disponíveis---");
+            console.log("--------------------------");
+            console.log("Frutas:");
+            for (let index = 0; index < frutas.length; index++) {
+                console.log(frutas[index]);
+            }
 
-            console.log("--------------------------")
+            console.log("--------------------------");
+            console.log("1 - Ver mais produtos");
+            console.log("0 - Voltar ao Menu");
+
+            let opcao = prompt("Digite a opção desejada:");
+            let numero = parseInt(opcao);
+
+            switch (numero) {
+                case 1:
+                    console.log("--------------------------");
+                    console.log("---Produtos disponíveis---");
+                    console.log("--------------------------");
+                    console.log("Verduras:");
+                    console.log("Alface");
+                    console.log("Espinafre");
+                    console.log("Tomate");
+                    console.log("Cenoura");
+                    console.log("-------------------------");
+                    console.log("1 - Página anterior");
+                    console.log("0 - Voltar ao Menu");
+
+                    let opcaoVerduras = prompt("Digite a opção desejada:");
+                    let numeroVerduras = parseInt(opcaoVerduras);
+
+                    switch (numeroVerduras) {
+                        case 1: 
+                            listaDeProdutos();
+                            break;
+                        case 0:
+                            menu();
+                            break;
+                    }
+                    break;
+
+                case 0:
+                    menu();
+                    break;
+            }
+
+            /*console.log("--------------------------")
             console.log("---Produtos disponíveis---")
             console.log("--------------------------")
             console.log("Frutas:")
@@ -98,29 +154,30 @@
                 case 0:
                     menu()
                     break;
-            }
+            }*/
         }
 
         // função de cadastro dos produtos
         function cadastroDeProdutos() {
-            console.log(`OI EU SOU A FUNCAO 2`)
+            console.log("Cadastre os produtos");
 
-            // Construtor da classe Produto, inicializa os atributos.
-            class Produto {
-                constructor(nome, preco){
-                    this.nome = nome,
-                    this.preco = preco
-                }
-            }
-            
             // criação do array
-            let cadastro = []
-            let produto
+            let produtos = [];
 
             //leitura de produtos
-            do {
+            let continuar = '1';
+            while (continuar == '1') {
+                let nome = prompt("Digite o nome do produto:");
+                let preco = prompt("Digite o preço:");
+                const produto = new Produto(nome, preco);
+                produtos.push(produto);
+                continuar = prompt("Para continuar digite 1 e para sair 0.");
+            }
+            console.log("Produtos cadastrados:");
+            for (let index = 0; index < produtos.length; index++) {
+                console.log(produtos[index]);
                 
-            } while (condition);
+            }
         }
 
         function produtosCadastrados() {
