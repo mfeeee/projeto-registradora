@@ -73,14 +73,14 @@
 
             switch (numero) {
                 case 1:
+                    var verduras = ['Alface', 'Espinafre', 'Tomate', 'Cenoura'];
                     console.log("--------------------------");
                     console.log("---Produtos disponíveis---");
                     console.log("--------------------------");
                     console.log("Verduras:");
-                    console.log("Alface");
-                    console.log("Espinafre");
-                    console.log("Tomate");
-                    console.log("Cenoura");
+                    for (let index = 0; index < verduras.length; index++) {
+                        console.log(verduras[index]);
+                    }
                     console.log("-------------------------");
                     console.log("1 - Página anterior");
                     console.log("0 - Voltar ao Menu");
@@ -89,20 +89,20 @@
                     let numeroVerduras = parseInt(opcaoVerduras);
 
                     switch (numeroVerduras) {
-                        case 1: 
+                        case 1:
                             listaDeProdutos();
                             break;
                         case 0:
                             menu();
                             break;
                     }
-                    break;
+                    break; // Este break deve estar aqui, fora do bloco for
 
                 case 0:
                     menu();
                     break;
             }
-
+        }
             /*console.log("--------------------------")
             console.log("---Produtos disponíveis---")
             console.log("--------------------------")
@@ -155,7 +155,7 @@
                     menu()
                     break;
             }*/
-        }
+        
 
         // função de cadastro dos produtos
         function cadastroDeProdutos() {
