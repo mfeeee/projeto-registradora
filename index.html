@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Denival | Jhonatan e Maria Fernanda</title>
+</head>
+<body>
+    <script>
+        // interface do menu
+        console.log(`---------------------------------------`)
+        console.log(`--------REGISTRADOR DE PRODUTOS--------`)
+        console.log(`---------------------------------------`)
+        console.log(`Opções:`)
+        console.log(`1 - Lista de Produtos`)
+        console.log(`2 - Cadastrar Produto`)
+        console.log(`3 - Produtos Cadastrados`)
+        console.log(`4 - Sair`)
+        let opcao = prompt("Digite a opção desejada:")
+        let numero = parseInt(opcao)
+
+        // analisar opcao escolhida
+        switch (numero) {
+            case 1:
+                listaDeProdutos()
+                break;
+            
+            case 2:
+                cadastroDeProdutos()
+
+            case 3:
+                produtosCadastrados()
+
+            case 4:
+                console.log("Saindo do programa...")
+            default:
+                break;
+        }
+    </script>
+</body>
+</html>
